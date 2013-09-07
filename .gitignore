@@ -1,4 +1,4 @@
 # ignore
 Cache/
 Index/
-Local/Session.*
+Local/*
