@@ -2,3 +2,5 @@
 Cache/
 Index/
 Local/*
+Packages/User/*.last-run
+Packages/User/*.cache
