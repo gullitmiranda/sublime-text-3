@@ -1,6 +1,7 @@
 # ignore
 Cache/
 Index/
+Backup/
 Local/*
 Packages/User/*.last-run
 Packages/User/*.cache
