@@ -32,6 +32,8 @@
 		"*.sqlite3",
 		"*.rbx",
 		".tags*",
+		".keep",
+		".fuse_hidden*",
 		"*.pyc"
 	],
 	"folder_exclude_patterns":
@@ -54,6 +56,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"LESS"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
