@@ -25,6 +25,8 @@
   { "keys": ["ctrl+;"], "command": "toggle_comment", "args": { "block": false } },
   { "keys": ["ctrl+shift+;"], "command": "toggle_comment", "args": { "block": true } },
 
+  { "keys": ["ctrl+'"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+
   {"keys": ["'"], "command": "insert_snippet", "args": {"contents": "\"${0:$SELECTION}\""}, "context":
     [
       {"key": "setting.auto_match_enabled", "operator": "equal", "operand": true},
