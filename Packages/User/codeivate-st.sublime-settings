@@ -1,0 +1,11 @@
+{
+	"dialog": false,
+	"growl_active": true,
+	"machine_name": "Requestdev-01",
+	"notify_send_active": true,
+	"notify_send_path": "/usr/bin/notify-send",
+	"pushover_active": false,
+	"pushover_user_id": "",
+	"user_id": "7785e0e08ab54e1c7653db5decfd7e6b343ad41d",
+	"user_token": "c40be965c8c991556b9d244102629027960e15d5"
+}
