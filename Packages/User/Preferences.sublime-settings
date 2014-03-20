@@ -56,10 +56,11 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Bootstrap 3 Snippets",
-		"Bootstrap 3 Jade Snippets",
 		"Markdown Extended",
-		"LESS"
+		"Bootstrap 3 Jade Snippets",
+		"Bootstrap 3 Snippets",
+		"SublimeERB",
+		"Stylus"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
