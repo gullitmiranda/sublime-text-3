@@ -58,6 +58,10 @@
 	"ignored_packages":
 	[
 	],
+	"index_exclude_patterns":
+	[
+		"*.log"
+	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
 	"new_window_settings":
