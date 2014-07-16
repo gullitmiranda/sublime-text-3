@@ -1,0 +1,7 @@
+[
+    // Sidebar entry
+    {
+        "class": "sidebar_label",
+        "font.size": 11
+    }
+]

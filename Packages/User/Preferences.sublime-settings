@@ -23,6 +23,7 @@
 	"caret_style": "phase",
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/Monokai Soda.tmTheme",
+	"default_encoding": "UTF-8",
 	"drag_text": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
@@ -40,7 +41,6 @@
 	"folder_exclude_patterns":
 	[
 		".svn",
-		".git",
 		"coverage",
 		"pkg",
 		".sass-cache",
@@ -60,7 +60,8 @@
 	],
 	"index_exclude_patterns":
 	[
-		"*.log"
+		"*.log",
+		"/home/gmmaster/Copy/www/air_crm_v3/tmp/cache*"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,

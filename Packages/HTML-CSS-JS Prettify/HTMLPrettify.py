@@ -64,7 +64,6 @@ following the instructions at:\n"""
 
     output = ""
     try:
-      print("Plugin folder is: " + PLUGIN_FOLDER)
       scriptPath = PLUGIN_FOLDER + "/scripts/run.js"
       filePath = self.view.file_name()
       output = get_output([node, scriptPath, tempPath, filePath or "?"])
@@ -89,8 +88,13 @@ following the instructions at:\n"""
         sublime.error_message(msg)
       return
 
+    # Dump any diagnostics from run.js
+    diagEndIndex = output.find(OUTPUT_VALID)
+    diagMessage = output[:diagEndIndex]
+    print(diagMessage.decode())
+
     # Remove the output identification marker (first line).
-    output = output[len(OUTPUT_VALID) + 1:]
+    output = output[diagEndIndex + len(OUTPUT_VALID) + 1:]
     os.remove(tempPath)
 
     # We're done with beautifying, change the text shown in the current buffer.
