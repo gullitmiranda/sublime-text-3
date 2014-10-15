@@ -40,6 +40,7 @@
 	],
 	"folder_exclude_patterns":
 	[
+		".git",
 		".svn",
 		"coverage",
 		"pkg",
@@ -57,11 +58,14 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"CSS",
+		"Color Highlighter",
+		"Markdown"
 	],
 	"index_exclude_patterns":
 	[
 		"*.log",
-		"/home/gmmaster/Copy/www/air_crm_v3/tmp/cache*"
+		"*/tmp/cache*"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
