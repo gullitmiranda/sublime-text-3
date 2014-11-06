@@ -18,6 +18,7 @@
 		"CSS3",
 		"DocBlockr",
 		"Dockerfile Syntax Highlighting",
+		"Dracula Color Scheme",
 		"eco",
 		"EditorConfig",
 		"EncodingHelper",
@@ -62,7 +63,6 @@
 		"sublimelint",
 		"SublimeLinter-contrib-mlint",
 		"Theme - Soda",
-		"Vagrant",
 		"WordCount"
 	]
 }

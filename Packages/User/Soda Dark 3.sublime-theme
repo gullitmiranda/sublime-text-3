@@ -1,7 +1,41 @@
 [
+// //
+// // TABS (REGULAR)
+// //
+//     // Tab set
+//     {
+//         "class": "tabset_control",
+//         // "layer0.inner_margin": [1, 7],
+//         // "content_margin": [-4, 0, -4, 3],
+//         "tab_overlap": 5,
+//         // "tab_width": 180,
+//         // "tab_min_width": 45,
+//         "tab_height": 22,
+//         // "mouse_wheel_switch": false
+//     },
+// //
+// // TABS (CLASSIC)
+// //
+//     // Tab set
+//     {
+//         "class": "tabset_control",
+//         "settings": ["soda_classic_tabs"],
+//         // "content_margin": [3, 4, 3, 3],
+//         "tab_overlap": 24,
+//         "tab_height": 25
+//     },
+//     // Tab Label
+//     {
+//         "class": "tab_label",
+//         "font.size": 9
+//     },
+
+//
+// Sidebar (REGULAR)
+//
     // Sidebar entry
     {
         "class": "sidebar_label",
-        "font.size": 11
+        "font.size": 8
     }
 ]
