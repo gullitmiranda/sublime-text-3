@@ -59,10 +59,10 @@
 	"ignored_packages":
 	[
 		"RubyTest",
-		"Color Highlighter",
 		"JavaScriptNext - ES6 Syntax",
-		"Markdown",
-		"CSS"
+		"Color Highlighter",
+		"CSS",
+		"Markdown"
 	],
 	"index_exclude_patterns":
 	[
