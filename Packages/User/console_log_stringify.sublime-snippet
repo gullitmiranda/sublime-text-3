@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.      DEBUG */
+  //           ------------------------------------------
+  var target = ${1};
+  //           ------------------------------------------
+  var depth  = 2; var inspectResult=require("util").inspect(target,{showHidden:!0,colors:!0,depth:depth});console.log("\n>>------------------------------------------------------\n  ##  ${1}\n  ------------------------------------------------------\n  source: ( "+__filename+" )"+"\n  ------------------------------------------------------\n"+inspectResult+"\n<<------------------------------------------------------\n");
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. /END-DEBUG */
+
+]]></content>
+  <tabTrigger>logs</tabTrigger>
+  <scope>source.js</scope>
+  <description>console.log stringify(...);</description>
+</snippet>
