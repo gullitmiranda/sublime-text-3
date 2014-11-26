@@ -58,10 +58,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"RubyTest",
 		"JavaScriptNext - ES6 Syntax",
 		"Color Highlighter",
 		"CSS",
+		"RubyTest",
 		"Markdown"
 	],
 	"index_exclude_patterns":
