@@ -34,8 +34,8 @@
 // Sidebar (REGULAR)
 //
     // Sidebar entry
-    {
-        "class": "sidebar_label",
-        "font.size": 8
-    }
+    // {
+    //     "class": "sidebar_label",
+    //     "font.size": 8
+    // }
 ]
