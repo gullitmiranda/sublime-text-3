@@ -53,16 +53,16 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 11,
+	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"CSS",
-		"JavaScriptNext - ES6 Syntax",
 		"RubyTest",
+		"Color Highlighter",
+		"JavaScriptNext - ES6 Syntax",
 		"Markdown",
-		"Color Highlighter"
+		"CSS"
 	],
 	"index_exclude_patterns":
 	[

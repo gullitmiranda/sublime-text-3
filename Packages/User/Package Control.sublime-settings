@@ -1,5 +1,13 @@
 {
 	"auto_upgrade_last_run": null,
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -22,19 +30,24 @@
 		"Dracula Color Scheme",
 		"eco",
 		"EditorConfig",
+		"Emmet",
 		"EncodingHelper",
 		"ERB Snippets",
+		"Floobits",
 		"Git",
 		"Git Config",
 		"GitGutter",
 		"Github Tools",
+		"Google Spell Check",
 		"HexViewer",
 		"HTML-CSS-JS Prettify",
 		"HTML2Haml",
 		"HTML5",
 		"HTMLAttributes",
 		"HTMLBeautify",
-		"JavaScriptNext - ES6 Syntax",
+		"Javascript Beautify",
+		"JavaScript Completions",
+		"JavaScript Snippets",
 		"jQuery Snippets for Coffeescript",
 		"JSHint",
 		"JSON Reindent",
@@ -62,9 +75,11 @@
 		"Slack",
 		"Spec Finder",
 		"SublimeERB",
-		"sublimelint",
-		"SublimeLinter-contrib-mlint",
+		"SublimeLinter",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
 		"Theme - Soda",
+		"Vanilla lodash Snippets",
 		"WordCount"
 	]
 }
