@@ -8,8 +8,12 @@
   {"keys": ["super+shift+r"], "command": "side_bar_rename"},
   {"keys": ["super+shift+m"], "command": "side_bar_move"},
   {"keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}},
+
   {"keys": ["super+shift+l"], "command": "expand_selection", "args": {"to": "line"}},
   {"keys": ["super+shift+j"], "command": "split_selection_into_lines"},
+  {"keys": ["ctrl+alt+up"], "command": "select_lines", "args": {"forward": false} },
+  {"keys": ["ctrl+alt+down"], "command": "select_lines", "args": {"forward": true} },
+
   {"keys": ["super+k", "super+t"], "command": "title_case"},
   {"keys": ["super+k", "super+s"], "command": "swap_case"},
   {"keys": ["ctrl+shift+q"], "command": "change_quotes"},

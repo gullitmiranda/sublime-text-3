@@ -3,11 +3,6 @@
 	"in_process_packages":
 	[
 	],
-	"installed_dependencies":
-	[
-		"0_package_control_loader",
-		"bz2"
-	],
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -20,7 +15,6 @@
 		"BufferScroll",
 		"Chai Completions",
 		"ChangeQuotes",
-		"Codeivate",
 		"CoffeeComplete Plus (Autocompletion)",
 		"Color Highlighter",
 		"ColorPicker",
@@ -30,6 +24,7 @@
 		"Dracula Color Scheme",
 		"eco",
 		"EditorConfig",
+		"EJS",
 		"Emmet",
 		"EncodingHelper",
 		"ERB Snippets",
@@ -48,11 +43,11 @@
 		"Javascript Beautify",
 		"JavaScript Completions",
 		"JavaScript Snippets",
-		"jQuery Snippets for Coffeescript",
 		"JSHint",
 		"JSON Reindent",
 		"LESS",
 		"LiveReload",
+		"Makefile Improved",
 		"Markdown Preview",
 		"MarkdownEditing",
 		"nginx",

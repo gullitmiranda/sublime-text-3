@@ -179,6 +179,9 @@ class FlooProtocol(base.BaseProtocol):
 
         self._empty_selects = 0
 
+        # Only use proxy.floobits.com if we're trying to connect to floobits.com
+        G.OUTBOUND_FILTERING = G.OUTBOUND_FILTERING and self.host == 'floobits.com'
+
         # TODO: Horrible code here
         if self.proxy:
             if G.OUTBOUND_FILTERING:
@@ -284,9 +287,15 @@ class FlooProtocol(base.BaseProtocol):
                 if not d:
                     break
                 buf += d
-            except (AttributeError):
+                # ST2 on Windows with Package Control 3 support!
+                # (socket.recv blocks for some damn reason)
+                if G.SOCK_SINGLE_READ:
+                    break
+            except AttributeError:
+                sock_debug('_sock is None')
                 return self.reconnect()
-            except (socket.error, TypeError):
+            except (socket.error, TypeError) as e:
+                sock_debug('Socket error:', e)
                 break
 
         if buf:

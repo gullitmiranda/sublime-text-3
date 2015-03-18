@@ -1,1 +1,1 @@
-{"dependencies": [], "sublime_text": "*", "platforms": ["*"], "version": "3.1.25", "url": "https://floobits.com/", "description": "Real-time collaboration plugin for Sublime Text 2/3"}
+{"description": "Real-time collaboration plugin for Sublime Text 2/3", "dependencies": [], "sublime_text": "*", "version": "3.2.1", "url": "https://floobits.com/", "platforms": ["*"]}
