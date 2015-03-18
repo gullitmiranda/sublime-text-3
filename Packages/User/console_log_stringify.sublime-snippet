@@ -1,13 +1,9 @@
 <snippet>
   <content><![CDATA[
-
-/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.      DEBUG */
-  //           ------------------------------------------
-  var target = ${1};
-  //           ------------------------------------------
-  var depth  = 2; var inspectResult=require("util").inspect(target,{showHidden:!0,colors:!0,depth:depth});console.log("\n>>------------------------------------------------------\n  ##  ${1}\n  ------------------------------------------------------\n  source: ( "+__filename+" )"+"\n  ------------------------------------------------------\n"+inspectResult+"\n<<------------------------------------------------------\n");
-/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. /END-DEBUG */
-
+console.log('\n>>---------\n ${1}:');
+console.log(require('util').inspect(${1},
+  { showHidden:false, colors:true }));
+console.log('\n>>---------\n');
 ]]></content>
   <tabTrigger>logs</tabTrigger>
   <scope>source.js</scope>
