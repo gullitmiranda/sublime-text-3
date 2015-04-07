@@ -59,11 +59,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Floobits",
-		"RubyTest",
-		"CSS",
-		"JavaScriptNext - ES6 Syntax",
 		"Makefile",
+		"JavaScriptNext - ES6 Syntax",
+		"CSS",
+		"RubyTest",
 		"Markdown",
 		"Color Highlighter"
 	],
