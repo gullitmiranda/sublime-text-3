@@ -7,3 +7,5 @@ Packages/User/*.last-run
 Packages/User/*.cache
 Settings/BufferScroll.bin.gz
 *.fuse*
+*.tmp
+*.bak
