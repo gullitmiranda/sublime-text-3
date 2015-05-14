@@ -58,12 +58,12 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Makefile",
-		"JavaScriptNext - ES6 Syntax",
+		"Color Highlighter",
 		"CSS",
 		"RubyTest",
-		"Markdown",
-		"Color Highlighter"
+		"Javascript",
+		"Makefile",
+		"Markdown"
 	],
 	"index_exclude_patterns":
 	[
