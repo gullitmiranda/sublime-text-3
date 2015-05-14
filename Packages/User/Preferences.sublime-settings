@@ -46,7 +46,6 @@
 		"coverage",
 		"pkg",
 		".sass-cache",
-		"node_modules",
 		".vagrant",
 		".idea"
 	],
