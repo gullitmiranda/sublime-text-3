@@ -1,0 +1,4 @@
+{
+  "done_tasks_bullet": "✓", // options: + | ✓ | ✔ | √ | [x]
+  "line_numbers": true,
+}
