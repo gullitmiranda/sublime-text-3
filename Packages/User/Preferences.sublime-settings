@@ -58,12 +58,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Color Highlighter",
-		"CSS",
-		"RubyTest",
-		"Javascript",
 		"Makefile",
-		"Markdown"
+		"Markdown",
+		"JavaScript",
+		"CSS"
 	],
 	"index_exclude_patterns":
 	[
