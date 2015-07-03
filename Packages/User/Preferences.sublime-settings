@@ -58,10 +58,11 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"JavaScript",
 		"Makefile",
-		"Markdown",
-		"CSS"
+		"Vintage",
+		"CSS",
+		"JavaScript",
+		"Markdown"
 	],
 	"index_exclude_patterns":
 	[

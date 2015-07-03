@@ -10,6 +10,8 @@
 		"ApplySyntax",
 		"AutoFileName",
 		"Babel",
+		"Bats (Bash Automated Testing System)",
+		"Better CoffeeScript",
 		"BracketGuard",
 		"BracketHighlighter",
 		"BufferScroll",
@@ -41,7 +43,6 @@
 		"JSON Reindent",
 		"LESS",
 		"Makefile Improved",
-		"Markdown Extended",
 		"Markdown Preview",
 		"MarkdownEditing",
 		"nginx",
@@ -70,6 +71,7 @@
 		"Theme - Soda",
 		"Theme - Spacefunk",
 		"URLEncode",
+		"WakaTime",
 		"WordCount"
 	]
 }
