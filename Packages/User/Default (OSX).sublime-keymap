@@ -41,6 +41,12 @@
               "output_type": "rtf"
   }},
 
+  // Windows Group
+  { "keys": ["super+shift+1"], "command": "focus_group", "args": { "group": 0 } },
+  { "keys": ["super+shift+2"], "command": "focus_group", "args": { "group": 1 } },
+  { "keys": ["super+shift+["], "command": "focus_neighboring_group", "args": {"forward": false} },
+  { "keys": ["super+shift+]"], "command": "focus_neighboring_group" },
+
   { "keys": ["super+shift+b"], "command": "anypreter" },
   { "keys": ["super+alt+n"], "command": "advanced_new_file"},
   // Spec Finder
