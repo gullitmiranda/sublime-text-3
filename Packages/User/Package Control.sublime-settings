@@ -1,5 +1,6 @@
 {
 	"auto_upgrade_last_run": null,
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -30,6 +31,7 @@
 		"Emmet",
 		"EncodingHelper",
 		"ERB Snippets",
+		"Focus File on Sidebar",
 		"Git",
 		"Git Config",
 		"GitGutter",
@@ -43,6 +45,7 @@
 		"JSON Reindent",
 		"LESS",
 		"Makefile Improved",
+		"Markdown Extended",
 		"Markdown Preview",
 		"MarkdownEditing",
 		"nginx",
