@@ -67,11 +67,11 @@
 	],
 	"index_exclude_patterns":
 	[
-		"*.sublime-project",
-		"*.sublime-workspace",
 		"images.sublime-workspace",
+		"*.log",
+		"*.sublime-project",
 		"*/tmp/cache*",
-		"*.log"
+		"*.sublime-workspace"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
