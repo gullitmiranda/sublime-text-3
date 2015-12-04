@@ -141,7 +141,8 @@ For more portability you can use `todolist.txt` either as a filename or as suffi
 [[path]] "any text"
 ```
 
-☐ To convert current document to HTML, bring up the command palette <kbd>⌘ + shift + p</kbd> and type `Tasks: View as HTML` — it will be opened in default webbrowser, so you can view and save it.
+☐ To convert current document to HTML, bring up the command palette <kbd>⌘ + shift + p</kbd> and type `Tasks: View as HTML` — it will be opened in default webbrowser, so you can view and save it.  
+`Tasks: Save as HTML…` ask if you want to save and if yes, allow to choose directory and filename (but won’t open it in webbrowser).
 
 ### Editor Useful Tools:
 
@@ -164,7 +165,7 @@ Here is a list of PlainTasks’ specific settings:
 | **open_tasks_bullet**          | ☐                | - ❍ ❑ ■ □ ☐ ▪ ▫ – — ≡ → › [ ]                                           |
 | **done_tasks_bullet**          | ✔                | ✓   ☑ + [x]                                                               |
 | **cancelled_tasks_bullet**     | ✘                | x [-]                                                                   |
-| **date_format**                | `(%y-%m-%d %H:%M)` |                                                                         |
+| **date_format**                | `(%y-%m-%d %H:%M)` | See [strfti.me](http://www.strfti.me/) for quick reference; detailed documentation: [ST2](https://docs.python.org/2.6/library/datetime.html#strftime-and-strptime-behavior), [ST3](https://docs.python.org/3.3/library/datetime.html#strftime-and-strptime-behavior) |
 | **done_tag**                   | true             | Determines whether done tasks should gain a @done tag or not            |
 | **before_tasks_bullet_margin** | 1                | Determines the number of spaces (default indent) before the task bullet |
 | **project_tag**                | true             | Postfix archived task with project tag, otherwise prefix                |

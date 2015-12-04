@@ -3,6 +3,114 @@ History
 -------
 
 
+6.0.0 (2015-12-01)
+++++++++++++++++++
+
+- use embeddable Python instead of installing on Windows
+
+
+5.0.1 (2015-10-06)
+++++++++++++++++++
+
+- look for python in system PATH again
+
+
+5.0.0 (2015-10-02)
+++++++++++++++++++
+
+- improve logging with levels and log function
+- switch registry warnings to debug log level
+
+
+4.0.20 (2015-10-01)
+++++++++++++++++++
+
+- correctly find python binary in non-Windows environments
+
+
+4.0.19 (2015-10-01)
+++++++++++++++++++
+
+- handle case where ST builtin python does not have _winreg or winreg module
+
+
+4.0.18 (2015-10-01)
+++++++++++++++++++
+
+- find python location from windows registry
+
+
+4.0.17 (2015-10-01)
+++++++++++++++++++
+
+- download python in non blocking background thread for Windows machines
+
+
+4.0.16 (2015-09-29)
+++++++++++++++++++
+
+- upgrade wakatime cli to v4.1.8
+- fix bug in guess_language function
+- improve dependency detection
+- default request timeout of 30 seconds
+- new --timeout command line argument to change request timeout in seconds
+- allow passing command line arguments using sys.argv
+- fix entry point for pypi distribution
+- new --entity and --entitytype command line arguments
+
+
+4.0.15 (2015-08-28)
+++++++++++++++++++
+
+- upgrade wakatime cli to v4.1.3
+- fix local session caching
+
+
+4.0.14 (2015-08-25)
+++++++++++++++++++
+
+- upgrade wakatime cli to v4.1.2
+- fix bug in offline caching which prevented heartbeats from being cleaned up
+
+
+4.0.13 (2015-08-25)
+++++++++++++++++++
+
+- upgrade wakatime cli to v4.1.1
+- send hostname in X-Machine-Name header
+- catch exceptions from pygments.modeline.get_filetype_from_buffer
+- upgrade requests package to v2.7.0
+- handle non-ASCII characters in import path on Windows, won't fix for Python2
+- upgrade argparse to v1.3.0
+- move language translations to api server
+- move extension rules to api server
+- detect correct header file language based on presence of .cpp or .c files named the same as the .h file
+
+
+4.0.12 (2015-07-31)
+++++++++++++++++++
+
+- correctly use urllib in Python3
+
+
+4.0.11 (2015-07-31)
+++++++++++++++++++
+
+- install python if missing on Windows OS
+
+
+4.0.10 (2015-07-31)
+++++++++++++++++++
+
+- downgrade requests library to v2.6.0
+
+
+4.0.9 (2015-07-29)
+++++++++++++++++++
+
+- catch exceptions from pygments.modeline.get_filetype_from_buffer
+
+
 4.0.8 (2015-06-23)
 ++++++++++++++++++
 
