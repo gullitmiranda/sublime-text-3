@@ -43,11 +43,11 @@
 		".git",
 		".svn",
 		".azk",
-		"coverage",
 		"pkg",
 		".sass-cache",
 		".vagrant",
-		".idea"
+		".idea",
+		"node_modules"
 	],
 	"font_options":
 	[
