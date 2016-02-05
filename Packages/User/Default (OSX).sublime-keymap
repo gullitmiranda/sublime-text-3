@@ -1,5 +1,6 @@
 [
   {"keys": ["super+alt+]"], "command": "alignment"},
+  {"keys": ["super+ctrl+w"], "command": "close_window"},
   {"keys": ["super+alt+w"], "command": "toggle_setting", "args": {"setting": "word_wrap"}},
   {"keys": ["ctrl+alt+["], "command": "fold"},
   {"keys": ["ctrl+alt+]"], "command": "unfold"},
