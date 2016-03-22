@@ -7,7 +7,7 @@ Website:     https://wakatime.com/
 ==========================================================="""
 
 
-__version__ = '6.0.6'
+__version__ = '6.0.7'
 
 
 import sublime
@@ -256,11 +256,10 @@ def find_python_from_registry(location, reg=None):
                         sub_key=sub_key,
                     ))
     except WindowsError:
-        if SETTINGS.get('debug'):
-            log(DEBUG, 'Could not read registry value "{reg}\\{key}".'.format(
-                reg=reg,
-                key=location,
-            ))
+        log(DEBUG, 'Could not read registry value "{reg}\\{key}".'.format(
+            reg=reg,
+            key=location,
+        ))
 
     return val
 
