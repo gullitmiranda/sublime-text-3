@@ -3,6 +3,21 @@ History
 -------
 
 
+6.0.6 (2016-03-06)
+++++++++++++++++++
+
+- upgrade wakatime-cli to v4.1.13
+- encode TimeZone as utf-8 before adding to headers
+- encode X-Machine-Name as utf-8 before adding to headers
+
+
+6.0.5 (2016-03-06)
+++++++++++++++++++
+
+- upgrade wakatime-cli to v4.1.11
+- encode machine hostname as Unicode when adding to X-Machine-Name header
+
+
 6.0.4 (2016-01-15)
 ++++++++++++++++++
 
