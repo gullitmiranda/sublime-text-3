@@ -1,4 +1,10 @@
 {
+	"Seti_ClosedFolder_remove": true,
+	"Seti_no_scroll_icons": true,
+	"Seti_orange_button": true,
+	"Seti_sb_small_padding": true,
+	"Seti_sb_tree_miny": true,
+	"Seti_show_group_arrows": true,
 	"auto_complete_commit_on_tab": true,
 	"binary_file_patterns":
 	[
@@ -92,7 +98,7 @@
 	"show_encoding": true,
 	"show_full_path": true,
 	"tab_size": 2,
-	"theme": "Spacefunk (Grey Tuesday).sublime-theme",
+	"theme": "Seti.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
