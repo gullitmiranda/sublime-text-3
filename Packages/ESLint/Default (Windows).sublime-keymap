@@ -1,0 +1,6 @@
+[
+  {
+    "keys": ["alt+e"],
+    "command": "eslint"
+  }
+]

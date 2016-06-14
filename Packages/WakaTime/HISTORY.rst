@@ -3,6 +3,75 @@ History
 -------
 
 
+7.0.6 (2016-06-13)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v6.0.5.
+- Upgrade pygments to v2.1.3 for better language coverage.
+
+
+7.0.5 (2016-06-08)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to master version to fix bug in urllib3 package causing
+  unhandled retry exceptions.
+- Prevent tracking git branch with detached head.
+
+
+7.0.4 (2016-05-21)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v6.0.3.
+- Upgrade requests dependency to v2.10.0.
+- Support for SOCKS proxies.
+
+
+7.0.3 (2016-05-16)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v6.0.2.
+- Prevent popup on Mac when xcode-tools is not installed.
+
+
+7.0.2 (2016-04-29)
+++++++++++++++++++
+
+- Prevent implicit unicode decoding from string format when logging output
+  from Python version check.
+
+
+7.0.1 (2016-04-28)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v6.0.1.
+- Fix bug which prevented plugin from being sent with extra heartbeats.
+
+
+7.0.0 (2016-04-28)
+++++++++++++++++++
+
+- Queue heartbeats and send to wakatime-cli after 4 seconds.
+- Nest settings menu under Package Settings.
+- Upgrade wakatime-cli to v6.0.0.
+- Increase default network timeout to 60 seconds when sending heartbeats to
+  the api.
+- New --extra-heartbeats command line argument for sending a JSON array of
+  extra queued heartbeats to STDIN.
+- Change --entitytype command line argument to --entity-type.
+- No longer allowing --entity-type of url.
+- Support passing an alternate language to cli to be used when a language can
+  not be guessed from the code file.
+
+
+6.0.8 (2016-04-18)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v5.0.0.
+- Support regex patterns in projectmap config section for renaming projects.
+- Upgrade pytz to v2016.3.
+- Upgrade tzlocal to v1.2.2.
+
+
 6.0.7 (2016-03-11)
 ++++++++++++++++++
 

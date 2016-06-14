@@ -69,30 +69,9 @@ KEYWORDS = [
 ]
 
 
-class LassoJavascriptParser(TokenParser):
-
-    def parse(self):
-        for index, token, content in self.tokens:
-            self._process_token(token, content)
-        return self.dependencies
-
-    def _process_token(self, token, content):
-        if u(token) == 'Token.Name.Other':
-            self._process_name(token, content)
-        elif u(token) == 'Token.Literal.String.Single' or u(token) == 'Token.Literal.String.Double':
-            self._process_literal_string(token, content)
-
-    def _process_name(self, token, content):
-        if content.lower() in KEYWORDS:
-            self.append(content.lower())
-
-    def _process_literal_string(self, token, content):
-        if 'famous/core/' in content.strip('"').strip("'"):
-            self.append('famous')
-
-
 class HtmlDjangoParser(TokenParser):
     tags = []
+    opening_tag = False
     getting_attrs = False
     current_attr = None
     current_attr_value = None
@@ -103,7 +82,9 @@ class HtmlDjangoParser(TokenParser):
         return self.dependencies
 
     def _process_token(self, token, content):
-        if u(token) == 'Token.Name.Tag':
+        if u(token) == 'Token.Punctuation':
+            self._process_punctuation(token, content)
+        elif u(token) == 'Token.Name.Tag':
             self._process_tag(token, content)
         elif u(token) == 'Token.Literal.String':
             self._process_string(token, content)
@@ -114,18 +95,27 @@ class HtmlDjangoParser(TokenParser):
     def current_tag(self):
         return None if len(self.tags) == 0 else self.tags[0]
 
-    def _process_tag(self, token, content):
+    def _process_punctuation(self, token, content):
         if content.startswith('</') or content.startswith('/'):
             try:
                 self.tags.pop(0)
             except IndexError:
                 # ignore errors from malformed markup
                 pass
+            self.opening_tag = False
             self.getting_attrs = False
         elif content.startswith('<'):
+            self.opening_tag = True
+        elif content.startswith('>'):
+            self.opening_tag = False
+            self.getting_attrs = False
+
+    def _process_tag(self, token, content):
+        if self.opening_tag:
             self.tags.insert(0, content.replace('<', '', 1).strip().lower())
             self.getting_attrs = True
         elif content.startswith('>'):
+            self.opening_tag = False
             self.getting_attrs = False
         self.current_attr = None
 

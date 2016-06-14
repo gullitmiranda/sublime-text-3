@@ -27,7 +27,7 @@ Installation
 Screen Shots
 ------------
 
-![Project Overview](https://wakatime.com/static/img/ScreenShots/ScreenShot-2014-10-29.png)
+![Project Overview](https://wakatime.com/static/img/ScreenShots/Screen-Shot-2016-03-21.png)
 
 
 Unresponsive Plugin Warning
@@ -47,7 +47,7 @@ Troubleshooting
 
 First, turn on debug mode in your `WakaTime.sublime-settings` file.
 
-![sublime user settings](https://wakatime.com/static/img/ScreenShots/sublime-wakatime-settings-menu.png)
+![sublime user settings](https://wakatime.com/static/img/ScreenShots/sublime-wakatime-settings-menu.png?v=3)
 
 Add the line: `"debug": true`
 
