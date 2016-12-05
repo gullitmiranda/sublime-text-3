@@ -96,5 +96,15 @@
         "key": "is_abbreviation"
       }
     ]
+  },
+  // Swap brackets with another type
+  {
+    "keys": ["ctrl+alt+super+e"],
+    "command": "swap_brackets"
+  },
+  // Surround selection with brackets from quick panel
+  {
+    "keys": ["ctrl+alt+super+w"],
+    "command": "wrap_brackets"
   }
 ]

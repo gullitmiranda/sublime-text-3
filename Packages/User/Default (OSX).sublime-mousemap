@@ -1,7 +1,7 @@
 [
   {
     "button": "button1",
-    "modifiers": ["alt"],
+    "modifiers": ["ctrl"],
     "press_command": "drag_select",
     "command": "elixir_goto_definition"
   },
