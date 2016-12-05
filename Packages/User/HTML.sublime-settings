@@ -2,6 +2,7 @@
 	"extensions":
 	[
 		"htm",
-		"html"
+		"html",
+		"ejs"
 	]
 }

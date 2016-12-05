@@ -1,6 +1,7 @@
 {
 	"extensions":
 	[
-		"qss"
+		"qss",
+		"css"
 	]
 }

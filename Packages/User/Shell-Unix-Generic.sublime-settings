@@ -1,14 +1,18 @@
 {
-	"apply_syntax_extensions":
-	[
-		"sh",
-		"bash",
-		"zsh"
-	],
-	"extensions":
-	[
-		"sh",
-		"bash",
-		"zsh"
-	]
+  "apply_syntax_extensions":
+  [
+    "sh",
+    "bash",
+    "zsh"
+  ],
+  "extensions":
+  [
+    "sh",
+    "bash",
+    "zsh",
+    ".env",
+    ".env.sample",
+    ".env.stage",
+    ".env.staging"
+  ]
 }
