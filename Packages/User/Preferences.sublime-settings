@@ -31,6 +31,7 @@
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/User/SublimeLinter/Material-Theme-OceanicNext (SL).tmTheme",
 	"default_encoding": "UTF-8",
+	"detect_indentation": false,
 	"drag_text": false,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
