@@ -3,6 +3,61 @@ History
 -------
 
 
+7.0.13 (2016-11-11)
+++++++++++++++++++
+
+- Support old Sublime Text with Python 2.6.
+- Fix bug that prevented reading default api key from existing config file.
+
+
+7.0.12 (2016-10-24)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v6.2.0.
+- Exit with status code 104 when api key is missing or invalid. Exit with
+  status code 103 when config file missing or invalid.
+- New WAKATIME_HOME env variable for setting path to config and log files.
+- Improve debug warning message from unsupported dependency parsers.
+
+
+7.0.11 (2016-09-23)
+++++++++++++++++++
+
+- Handle UnicodeDecodeError when when logging. Related to #68.
+
+
+7.0.10 (2016-09-22)
+++++++++++++++++++
+
+- Handle UnicodeDecodeError when looking for python. Fixes #68.
+- Upgrade wakatime-cli to v6.0.9.
+
+
+7.0.9 (2016-09-02)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v6.0.8.
+
+
+7.0.8 (2016-07-21)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to master version to fix debug logging encoding bug.
+
+
+7.0.7 (2016-07-06)
+++++++++++++++++++
+
+- Upgrade wakatime-cli to v6.0.7.
+- Handle unknown exceptions from requests library by deleting cached session
+  object because it could be from a previous conflicting version.
+- New hostname setting in config file to set machine hostname. Hostname
+  argument takes priority over hostname from config file.
+- Prevent logging unrelated exception when logging tracebacks.
+- Use correct namespace for pygments.lexers.ClassNotFound exception so it is
+  caught when dependency detection not available for a language.
+
+
 7.0.6 (2016-06-13)
 ++++++++++++++++++
 

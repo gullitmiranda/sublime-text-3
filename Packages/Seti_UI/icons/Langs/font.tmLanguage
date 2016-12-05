@@ -6,17 +6,11 @@
 	<string>Font</string>
 	<key>fileTypes</key>
 	<array>
+		<string>eot</string>
 		<string>ttf</string>
 		<string>otf</string>
 		<string>woff</string>
-		<string>eot</string>
-	</array>
-	<key>patterns</key>
-	<array>
-		<dict>
-			<key>include</key>
-			<string></string>
-		</dict>
+		<string>woff2</string>
 	</array>
 	<key>scopeName</key>
 	<string>font</string>

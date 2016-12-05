@@ -6,7 +6,7 @@
 	<string>React JSX</string>
 	<key>fileTypes</key>
 	<array>
-		<string>react.jsx</string>
+		<string>jsx</string>
 	</array>
 	<key>patterns</key>
 	<array>
@@ -16,6 +16,6 @@
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.js, source.jsx</string>
+	<string>source.jsx</string>
 </dict>
 </plist>

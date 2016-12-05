@@ -7,12 +7,13 @@ Website:     https://wakatime.com/
 ==========================================================="""
 
 
-__version__ = '7.0.6'
+__version__ = '7.0.13'
 
 
 import sublime
 import sublime_plugin
 
+import contextlib
 import json
 import os
 import platform
@@ -20,11 +21,12 @@ import re
 import sys
 import time
 import threading
+import traceback
 import urllib
 import webbrowser
 from datetime import datetime
-from zipfile import ZipFile
 from subprocess import Popen, STDOUT, PIPE
+from zipfile import ZipFile
 try:
     import _winreg as winreg  # py2
 except ImportError:
@@ -54,7 +56,7 @@ if is_py2:
                 try:
                     return unicode(text)
                 except:
-                    return text
+                    return text.decode('utf-8', 'replace')
 
 elif is_py3:
     def u(text):
@@ -71,7 +73,7 @@ elif is_py3:
         try:
             return str(text)
         except:
-            return text
+            return text.decode('utf-8', 'replace')
 
 else:
     raise Exception('Unsupported Python version: {0}.{1}.{2}'.format(
@@ -107,7 +109,7 @@ ERROR = 'ERROR'
 # add wakatime package to path
 sys.path.insert(0, os.path.join(PLUGIN_DIR, 'packages'))
 try:
-    from wakatime.base import parseConfigFile
+    from wakatime.main import parseConfigFile
 except ImportError:
     pass
 
@@ -135,7 +137,10 @@ def log(lvl, message, *args, **kwargs):
             msg = message.format(*args)
         elif len(kwargs) > 0:
             msg = message.format(**kwargs)
-        print('[WakaTime] [{lvl}] {msg}'.format(lvl=lvl, msg=msg))
+        try:
+            print('[WakaTime] [{lvl}] {msg}'.format(lvl=lvl, msg=msg))
+        except UnicodeDecodeError:
+            print(u('[WakaTime] [{lvl}] {msg}').format(lvl=lvl, msg=u(msg)))
     except RuntimeError:
         set_timeout(lambda: log(lvl, message, *args, **kwargs), 0)
 
@@ -302,6 +307,12 @@ def find_python_from_registry(location, reg=None):
             reg=reg,
             key=location,
         ))
+    except:
+        log(ERROR, 'Could not read registry value "{reg}\\{key}":\n{exc}'.format(
+            reg=reg,
+            key=location,
+            exc=traceback.format_exc(),
+        ))
 
     return val
 
@@ -314,7 +325,7 @@ def find_python_in_folder(folder, headless=True):
         path = os.path.realpath(os.path.join(folder, 'python'))
     if headless:
         path = u(path) + u('w')
-    log(DEBUG, u('Looking for Python at: {0}').format(path))
+    log(DEBUG, u('Looking for Python at: {0}').format(u(path)))
     try:
         process = Popen([path, '--version'], stdout=PIPE, stderr=STDOUT)
         output, err = process.communicate()
@@ -572,7 +583,7 @@ class DownloadPython(threading.Thread):
     def run(self):
         log(INFO, 'Downloading embeddable Python...')
 
-        ver = '3.5.0'
+        ver = '3.5.2'
         arch = 'amd64' if platform.architecture()[0] == '64bit' else 'win32'
         url = 'https://www.python.org/ftp/python/{ver}/python-{ver}-embed-{arch}.zip'.format(
             ver=ver,
@@ -589,7 +600,7 @@ class DownloadPython(threading.Thread):
             urllib.request.urlretrieve(url, zip_file)
 
         log(INFO, 'Extracting Python...')
-        with ZipFile(zip_file) as zf:
+        with contextlib.closing(ZipFile(zip_file)) as zf:
             path = os.path.join(resources_folder(), 'python')
             zf.extractall(path)
 

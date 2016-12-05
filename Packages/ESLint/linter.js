@@ -6,11 +6,14 @@ var nodeModulesPath = args[1];
 if (nodeModulesPath) {
   module.paths.push(nodeModulesPath);
 }
-
-var MAX_WARNINGS = 7;
+var configFile = args[2];
 
 var CLIEngine = require('eslint').CLIEngine;
-var cli = new CLIEngine();
+var options = {};
+if (configFile) {
+  options.configFile = configFile;
+}
+var cli = new CLIEngine(options);
 
 var report = cli.executeOnFiles([targetPath]);
 // eslint-disable-next-line no-console
@@ -19,7 +22,6 @@ console.log(format(report.results));
 
 function format(results) {
   var lines = [];
-  var title = 'error';
 
   function numberWang(wangaNumb) {
     var thatsNumberWang = 7 - wangaNumb;
@@ -39,37 +41,31 @@ function format(results) {
   var messages = results[0].messages;
   var errorCount = results[0].errorCount || 0;
   var warningCount = results[0].warningCount || 0;
-  var count = 0;
 
-  errorCount += warningCount;
-
-  if (errorCount) {
-    if (errorCount > 1) {
-      title += 's';
-    }
+  if (errorCount || warningCount) {
 
     messages.forEach(function(error) {
-      if (count >= MAX_WARNINGS) {
-        return;
-      }
       var ruleId = error.ruleId ? ' (' + error.ruleId + ')' : '';
+      var severity = (error.severity === 1 ? 'Warn ' : 'Error');
 
       lines.push([
+        '\t',
+        severity,
         numberWang((error.line + error.column.toString()).length),
         error.line + ',' + error.column + ':',
         error.message + ruleId
       ].join(' '));
-
-      count++;
     });
 
     lines.push('');
-    lines.push(
-      '✗ ' + count + ' ' + title +
-      ', double-click above, [F4] for next, [shift-F4] for previous.'
+    lines.push('✗ ' +
+      errorCount + ' ' + (errorCount === 1 ? 'error' : 'errors') + ', ' +
+      warningCount + ' ' + (warningCount === 1 ? 'warning' : 'warnings'));
+    lines.push('');
+    lines.push('Double-click on lines to jump to location, [F4] for next, [shift-F4] for previous.'
     );
   } else {
-    lines.push('✓ 0 errors, [esc] to hide.');
+    lines.push('✓ 0 errors and warnings, [esc] to hide.');
   }
 
   lines.push('');

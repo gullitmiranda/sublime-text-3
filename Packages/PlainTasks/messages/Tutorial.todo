@@ -21,6 +21,10 @@ Tasks:
    ☐ ctrl+c (alt+c on Windows) marks the task as cancelled
   Tagging:
    ☐ You can add tags using @ sign, like this @tag
+     You can place cursors on tags, click right mouse button and **Filter by tags under cursors**
+     Pending tasks with selected tags will remain visible (and their notes and projects they belong to),
+     but everything else will be hidden/folded
+     To unfold all press ⌘+k, ⌘+j or ⌘+k, ⌘+0
   URLs:
    ☐ ⌘+shift+U (ctrl+shift+U on Windows) opens the URL under the cursor in your default browser
      www.github.com or <skype:nickname>
@@ -84,9 +88,10 @@ Time Tracking:
     Dot can be used instead of hyphen, but should be consistent _year.month.day_
       - year, month, minute, hour can be omitted:
         - @due(1)          → 1st day of next month always
+        - @due(-1)         → 1st day of current month always
         - @due(5)          → 5th day of current month (or next month if current day is 5th or older)
         - @due(2-3)        → February 3rd of current year or next one
-        - @due(31 23:)     → 31st day of current/next month at 23 hours and minutes are equal to current moment
+        - @due(28 23:)     → 28th day of current/next month at 23 hours and minutes are equal to current moment
         - @due(16.1.1 1:1) → January 1st of 2016 at 01:01 @due(16-01-01 01:01)
       - relative period of time starts with a plus sign or two
         __+[+][number][DdWw][h:m]__ — number is optional as well as letter d for days or letter w for weeks
@@ -97,6 +102,11 @@ Time Tracking:
         - @due(+2:)    = @due( +2.)    →  two hours since current date
         - @due(+:555)  = @due( +.555)  →  555 minutes since current date
         - @due(+2 12:) = @due( +2 12.) →  2 days and 12 hours since current date
+
+    You probably notice that due tags looks unusual, past (overdue or expired) and those due soon
+    (in next 24 hours by default) are dynamically highlighted depending on system time;
+    You can search 'Tasks: Fold to due tasks' in command palette to fold/hide everything except
+    pending tasks with past or soon due tag, their notes, and projects or separators they belong to.
 
 ☐ ctrl+space (alt+/ on Linux) shows list of those tags
 
@@ -112,7 +122,7 @@ You can customize:
  ☐ New and done bullets
  ☐ List of file-types that should be considered todo lists
  ☐ Key-bindings if you don’t like the default ones
- ☐ Date formating for done tasks
+ ☐ Date formatting for done tasks
  ☐ Colour scheme
  ☐ Statistics appearance
  ☐ Icon for file-type

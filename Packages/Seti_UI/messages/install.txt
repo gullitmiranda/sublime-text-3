@@ -30,8 +30,9 @@ or use
 - for better recognition of file types, its recommended to install [Apply​Syntax](https://sublime.wbond.net/packages/ApplySyntax) by facelessuser.
 
 
-## Folder Contents
+## Fonts
 ----------------------
-Resource
-  |-Ext   > copy the content of this folder to your 'Packages/User' folder so (Extensions/Files) can recognize their correct language/icons.
-  |-Fonts > install them before applying the sidebar font options.
+https://www.fontsquirrel.com/fonts/fira-mono
+https://www.fontsquirrel.com/fonts/source-code-pro
+https://www.fontsquirrel.com/fonts/ubuntu-mono
+http://sourcefoundry.org/hack/

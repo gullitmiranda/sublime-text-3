@@ -12,7 +12,7 @@ Lint ECMAScript/JavaScript syntax by [ESLint][ESLint Official] in [Sublime Text 
 
 ### Install Node.js and eslint
 
-Before using this plugin, you must ensure that `eslint` is installed on your system.  
+Before using this plugin, you must ensure that `eslint` is installed on your system.
 To install `eslint`, do the following:
 
 1. Install [Node.js][Node.js] (and [npm][npm] on Linux).
@@ -37,13 +37,13 @@ ESLint an active JavaScript file.
 
 * Open the context menu (right-click), and Select **ESLint**,  
   Or Open "Command Pallet" and Select **ESLint**,  
-  Or keyboard shortcut: <kbd>Alt</kbd> + <kbd>e</kbd> (<kbd>Option</kbd> + <kbd>e</kbd> on OSX)
+  Or keyboard shortcut: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>e</kbd> (<kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>e</kbd> on OSX)
 
 * <kbd>F4</kbd> : Jump to next error row/column
 * <kbd>Shift</kbd> + <kbd>F4</kbd> : Jump to previous error row-column
 
 **Note:**
-The <kbd>Alt</kbd> + <kbd>e</kbd> (<kbd>Option</kbd> + <kbd>e</kbd> on OSX) shortcut changes the Build System on the current file to ESLint,
+The <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>e</kbd> (<kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>e</kbd> on OSX) shortcut changes the Build System on the current file to ESLint,
 then Builds to run ESLint on the file and output any errors for jumping to within the file.
 You could alternatively set the Build System to Automatic and <kbd>Ctrl</kbd> + <kbd>b</kbd> (<kbd>Cmd</kbd> + <kbd>b</kbd> on OSX) or <kbd>F7</kbd>,
 but only on files that end with `.js`.
@@ -58,7 +58,7 @@ For more information, see the [ESLint docs][ESLint Official Configuration Docs].
 
 ## Settings
 
-Several settings are available to customize the plugin's behavior.  
+Several settings are available to customize the plugin's behavior.
 Those settings are stored in a configuration file, as JSON.
 
 Go to "`Preferences` / `Package Settings` / `ESLint` / `Settings - User`" to add your custom settings.
@@ -77,12 +77,24 @@ If this is not specified, then it is expected to be on Sublime's environment pat
 The directory location of global `node_modules` via `npm`.
 If this is not specified, then it is expected to be on system environment variable `NODE_PATH`.
 
+### config_file
+
+*Default: `""`*
+
+This option allows you to specify an additional configuration file for ESLint.
+If not specified, follows the default config file hierarchy.
+This option works same as ESLint `-c` or `--config` command line option.
+
+For more information, see the [ESLint docs][ESLint Official Specifying Basic Configuration File Docs].
+
+
 Example:
 
 ```javascript
 {
   "node_path": "/usr/local/bin",
-  "node_modules_path": "/usr/local/lib/node_modules"
+  "node_modules_path": "/usr/local/lib/node_modules",
+  "config_file": "/path/to/.eslintrc.js"
 }
 ```
 
@@ -93,6 +105,7 @@ Install [SublimeOnSaveBuild][SublimeOnSaveBuild]
 
 [ESLint Official]: http://eslint.org/
 [ESLint Official Configuration Docs]: http://eslint.org/docs/user-guide/configuring#configuration-file-formats
+[ESLint Official Specifying Basic Configuration File Docs]: http://eslint.org/docs/user-guide/command-line-interface#basic-configuration
 [Sublime Text 2]: http://www.sublimetext.com/2
 [Sublime Text 3]: http://www.sublimetext.com/3
 [ECMAScript 6]: http://www.ecma-international.org/publications/standards/Ecma-262.htm

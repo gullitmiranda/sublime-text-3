@@ -1,6 +1,6 @@
 [
   {
-    "keys": ["alt+e"],
+    "keys": ["ctrl+alt+e"],
     "command": "eslint"
   }
 ]

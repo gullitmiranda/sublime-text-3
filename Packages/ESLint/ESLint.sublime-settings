@@ -21,5 +21,12 @@
   // On OSX, for example: "/usr/local/lib/node_modules"
   // Example for nodebrew: "$HOME/.nodebrew/current/lib/node_modules"
   // Example for Windows: "%APPDATA%/npm/node_modules"
-  "node_modules_path": ""
+  "node_modules_path": "",
+
+  // The location of your configuration file.
+  // This option works same as ESLint `-c` option.
+  // This option allows you to specify the location of your `.eslintrc` file
+  //
+  // Example: "/path/to/.eslintrc.js"
+  "config_file": ""
 }

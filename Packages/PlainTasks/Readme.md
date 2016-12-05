@@ -1,4 +1,6 @@
-## [PlainTasks](https://github.com/aziz/PlainTasks)
+## [PlainTasks](https://github.com/aziz/PlainTasks) 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8d42f3e49d104ab8bf663392661b183b)](https://www.codacy.com/app/allen-bargi/PlainTasks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aziz/PlainTasks&amp;utm_campaign=Badge_Grade)
+
 An opinionated todo-list plugin for Sublime Text (2 & 3) editor
 ![](http://cl.ly/image/1q100Q212o2Q/ss.png)
 
@@ -64,6 +66,10 @@ For more portability you can use `todolist.txt` either as a filename or as suffi
          <tr>
           <td>  <code>@due(1)</code>    </td>
           <td>  1st day of next month always    </td>
+         </tr>
+         <tr>
+          <td>  <code>@due(-1)</code>    </td>
+          <td>  1st day of current month always    </td>
          </tr>
          <tr>
           <td>  <code>@due(5)</code>    </td>
@@ -163,23 +169,42 @@ Here is a list of PlainTasks’ specific settings:
 
 |            Setting             |     Default      |                                 Options/Description                                 |
 | ------------------------------ | ---------------- | ----------------------------------------------------------------------- |
-| **open_tasks_bullet**          | ☐                | - ❍ ❑ ■ □ ☐ ▪ ▫ – — ≡ → › [ ]                                           |
-| **done_tasks_bullet**          | ✔                | ✓   ☑ + [x]                                                               |
-| **cancelled_tasks_bullet**     | ✘                | x [-]                                                                   |
+| **open_tasks_bullet**          | `☐`              | `-` `❍` `❑` `■` `□` `☐` `▪` `▫` `–` `—` `≡` `→` `›` `[ ]`             |
+| **done_tasks_bullet**          | `✔`              | `✓` `☑` `+` `[x]`                                                      |
+| **cancelled_tasks_bullet**     | `✘`              | `x` `[-]`                                                               |
 | **date_format**                | `(%y-%m-%d %H:%M)` | See [strfti.me](http://www.strfti.me/) for quick reference; detailed documentation: [ST2](https://docs.python.org/2.6/library/datetime.html#strftime-and-strptime-behavior), [ST3](https://docs.python.org/3.3/library/datetime.html#strftime-and-strptime-behavior) |
-| **done_tag**                   | true             | Determines whether done tasks should gain a @done tag or not            |
+| **done_tag**                   | true             | Determines whether done tasks should gain a `@done` tag or not          |
 | **before_tasks_bullet_margin** | 1                | Determines the number of spaces (default indent) before the task bullet |
 | **project_tag**                | true             | Postfix archived task with project tag, otherwise prefix                |
 | **archive_name**               | `Archive:`       | Make sure it is the unique project name within your todo files          |
 | **new_on_top**                 | true             | How to sort archived tasks (done_tag=true and default date_format are required)|
-| **header_to_task**             | absent (false)   | If true, a project title line will be converted to a task on the certain keystroke  |
-| **decimal_minutes**            | absent (false)   | If true, minutes in lasted/wasted tags will be persent of hour, e.g. 1.50 instead of 1:30 |
-| **tasks_bullet_space** | absent (whitespace or tab) | String to place after bullet, might be any character(s) |
+| **header_to_task**             | false            | If true, a project title line will be converted to a task on the certain keystroke  |
+| **decimal_minutes**            | false            | If true, minutes in lasted/wasted tags will be percent of hour, e.g. 1.50 instead of 1:30 |
+| **tasks_bullet_space**         | whitespace or tab | String to place after bullet, might be any character(s)                |
+| **highlight_past_due**         | true             | If true, highlight past, soon, and invalid `@due(something)`            |
+| **highlight_due_soon**         | 24               | Hours as int, threshold to define which `@due` will be soon             |
+| **scope_past_due**             | `string.other.tag.todo.critical` | Any scope, define color for past `@due`                 |
+| **scope_due_soon**             | `string.other.tag.todo.high`     | Any scope, define color for `@due` will be soon         |
+| **scope_misformatted**         | `string.other.tag.todo.low`      | Any scope, define color for `@due` mismatch **date_format** |
+| **show_remain_due**            | true             | In Sublime 3, show remain or overdue time under due tags                |
+| **show_calendar_on_tags**      | false            | In Sublime 3, if true, automatically show date picker when cursor is on tag (you can get date picker any time via context menu) |
 
+### Changing color scheme
+If you don't like colors used in bundled schemes just copy any `.hidden-tmTheme` from PlainTasks to 
+your User directory, change colors and paste the code below in your user settings file:
 
+``` json
+{ "color_scheme": "Path to your custom color scheme file. e.g. Packages/User/custom_plaintasks.hidden-tmTheme" }
+```
+
+**N.B.**, sometimes you have to restart Sublime Text to apply changes made in tmTheme file.
+
+**N.B.**, `scope_past_due`, `scope_due_soon`, and `scope_misformatted` settings can assign any scopes defined in tmTheme file, e.g. 
+you can set `"scope_past_due": "my.own.super.expired.whatever"` and then just add style definition in tmTheme for this scope.
 
 ### Taskpaper Compatibility
-Go to `Preferences → Package Settings → PlainTasks` and open `Settings - User`, then
+If you need to keep your files compatible with Taskpaper, go to 
+`Preferences → Package Settings → PlainTasks` and open `Settings - User`, then
 add these settings to the json file:
 
 ```json
@@ -246,13 +271,14 @@ Bring up the command palette and type `Tasks: Copy Statistics`.
 }
 ```
 
-## [Introduction to PlainTasks Screencast](https://tutsplus.com/lesson/pretty-task-management/)
-[![](http://i46.tinypic.com/9ggbd3.png)](https://tutsplus.com/lesson/pretty-task-management/)
+## Introduction to PlainTasks Screencast
+[![](http://i46.tinypic.com/9ggbd3.png)](https://www.youtube.com/watch?v=LsfGhjRVJwk)
 
 ## PlainTasks for other editors
 NOTE: These are separate projects, maintained by some awesome developers other than us.
 - [Atom: Tasks plugin](https://atom.io/packages/tasks)
 - [Vim: Plaintasks.vim](https://github.com/elentok/plaintasks.vim)
+- [Visual Studio Code: To Do Tasks](https://github.com/sandy081/vscode-todotasks)
 
 
 ## Contributors
