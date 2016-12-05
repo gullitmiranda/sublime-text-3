@@ -44,7 +44,8 @@
 		".tags*",
 		".keep",
 		".fuse_hidden*",
-		"*.pyc"
+		"*.pyc",
+		"*.sublime-workspace"
 	],
 	"folder_exclude_patterns":
 	[
@@ -61,7 +62,7 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 13,
+	"font_size": 15,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
